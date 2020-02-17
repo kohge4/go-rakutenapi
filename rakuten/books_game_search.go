@@ -74,5 +74,4 @@ func (s *BooksService) GameSearch(ctx context.Context, opt *BooksGameSearchParam
 		return nil, resp, err
 	}
 	return respBody, resp, nil
-	return nil, nil, nil
 }
