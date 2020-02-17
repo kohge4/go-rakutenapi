@@ -1,6 +1,6 @@
 package test
 
-import "go-rakutenapi/rakuten"
+import "github.com/kohge4/go-rakutenapi/rakuten"
 
 const (
 	applicationID     = "1058291654304154113"
