@@ -1,8 +1,6 @@
 language: go
 
 install:
-  - go get -v -t ./rakuten
-  - go get -v -t ./test
 
 script:
   - make
