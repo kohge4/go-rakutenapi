@@ -1,14 +1,13 @@
-package test
+package rakuten
 
 import (
-	"go-rakuten-ws/rakuten"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestKoboGenre(t *testing.T) {
-	params := &rakuten.KoboGenreParams{
+	params := &KoboGenreParams{
 		KoboGenreID: 101912005001,
 	}
 	_, _, err := client.Kobo.GenreSearch(ctx, params)
@@ -16,7 +15,7 @@ func TestKoboGenre(t *testing.T) {
 }
 
 func TestKoboEbooks(t *testing.T) {
-	params := &rakuten.KoboEbooksParams{
+	params := &KoboEbooksParams{
 		Keyword: "Go言語",
 	}
 	_, _, err := client.Kobo.EbooksSearch(ctx, params)

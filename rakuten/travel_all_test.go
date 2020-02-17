@@ -1,26 +1,25 @@
-package test
+package rakuten
 
 import (
 	"testing"
 
-	"github.com/kohge4/go-rakutenapi/rakuten"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestTravelGetAreaClass(t *testing.T) {
-	params := &rakuten.TravelGetAreaParams{}
+	params := &TravelGetAreaParams{}
 	_, _, err := client.Travel.GetArea(ctx, params)
 	assert.Nil(t, err)
 }
 
 func TestTravelHotelChain(t *testing.T) {
-	params := &rakuten.TravelHotelChainParams{}
+	params := &TravelHotelChainParams{}
 	_, _, err := client.Travel.HotelChain(ctx, params)
 	assert.Nil(t, err)
 }
 
 func TestTravelHotelRanking(t *testing.T) {
-	params := &rakuten.TravelHotelRankingParams{
+	params := &TravelHotelRankingParams{
 		Genre:   "onsen",
 		Carrier: 0,
 	}
@@ -29,7 +28,7 @@ func TestTravelHotelRanking(t *testing.T) {
 }
 
 func TestTravelKeywordHotel(t *testing.T) {
-	params := &rakuten.TravelHotelKeywordSearchParams{
+	params := &TravelHotelKeywordSearchParams{
 		Keyword: "北海道",
 		Hits:    5,
 	}
@@ -38,7 +37,7 @@ func TestTravelKeywordHotel(t *testing.T) {
 }
 
 func TestTravelSimpleSearch(t *testing.T) {
-	params := &rakuten.TravelHotelSimpleSearchParams{
+	params := &TravelHotelSimpleSearchParams{
 		LargeClassCode:  "japan",
 		MiddleClassCode: "akita",
 		SmallClassCode:  "tazawa",
@@ -48,7 +47,7 @@ func TestTravelSimpleSearch(t *testing.T) {
 }
 
 func TestTraveHotelDetailSearch(t *testing.T) {
-	params := &rakuten.TravelHotelDetailSearchParams{
+	params := &TravelHotelDetailSearchParams{
 		HotelNo: 4624,
 	}
 	_, _, err := client.Travel.HotelDetailSearch(ctx, params)
@@ -56,7 +55,7 @@ func TestTraveHotelDetailSearch(t *testing.T) {
 }
 
 func TestTravelVacantHotelSearch(t *testing.T) {
-	params := &rakuten.TravelVacantHotelSearchParams{
+	params := &TravelVacantHotelSearchParams{
 		LargeClassCode:  "japan",
 		MiddleClassCode: "akita",
 		SmallClassCode:  "tazawa",

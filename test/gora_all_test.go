@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/kohge4/go-rakutenapi"
+	"go-rakutenapi/rakuten"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

@@ -1,14 +1,13 @@
-package test
+package rakuten
 
 import (
 	"testing"
 
-	"github.com/kohge4/go-rakutenapi/rakuten"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestRecipeRanking(t *testing.T) {
-	params := &rakuten.RecipeRankingParams{
+	params := &RecipeRankingParams{
 		CategoryID: "46",
 	}
 	_, _, err := client.Recipe.Ranking(ctx, params)
@@ -16,7 +15,7 @@ func TestRecipeRanking(t *testing.T) {
 }
 
 func TestRecipecategory(t *testing.T) {
-	params := &rakuten.RecipeCategoryParams{
+	params := &RecipeCategoryParams{
 		CategoryType: "small",
 		// Category Type は small, medium, large のうちどれか選択
 	}

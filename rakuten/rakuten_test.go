@@ -1,6 +1,4 @@
-package test
-
-import "go-rakutenapi/rakuten"
+package rakuten
 
 const (
 	applicationID     = "1058291654304154113"
@@ -8,9 +6,9 @@ const (
 	affiliateID       = "1a11cd3a.d53d02bd.1a11cd3b.54ce7249"
 )
 
-func NewTestClient() *rakuten.Client {
-	tp := rakuten.Transport{}
+func NewTestClient() *Client {
+	tp := Transport{}
 	//client := rakuten.NewClient(tp.Client(), os.Getenv("applicationID"), os.Getenv("affiliateID"))
-	client := rakuten.NewClient(tp.Client(), applicationID, affiliateID)
+	client := NewClient(tp.Client(), applicationID, affiliateID)
 	return client
 }

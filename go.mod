@@ -1,4 +1,4 @@
-module github.com/kohge4/go-rakutenapi
+module go-rakutenapi
 
 go 1.13
 
