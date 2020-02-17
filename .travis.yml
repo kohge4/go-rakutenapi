@@ -1,6 +1,6 @@
 language: go
 
 install:
-  - go get -v -t ./twitter
+  - go get -v -t ./rakuten
 script:
   - make
