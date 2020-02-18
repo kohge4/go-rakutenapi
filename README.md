@@ -1,4 +1,4 @@
-# go-rakutenapi
+# go-rakutenapi [![Build Status](https://travis-ci.com/kohge4/go-rakutenapi.svg?branch=master)](https://travis-ci.com/kohge4/go-rakutenapi)
 
 - https://webservice.rakuten.co.jp/document/
 - 楽天ウェブサービスAPIのSDK
