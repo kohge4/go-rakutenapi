@@ -30,21 +30,21 @@ func TestTravelHotelRanking(t *testing.T) {
 }
 
 func TestTravelKeywordHotel(t *testing.T) {
-	params := &rakuten.TravelHotelKeywordSearchParams{
+	params := &rakuten.TravelKeywordHotelSearchParams{
 		Keyword: "北海道",
 		Hits:    5,
 	}
-	_, _, err := client.Travel.HotelKeywordSearch(ctx, params)
+	_, _, err := client.Travel.KeywordHotelSearch(ctx, params)
 	assert.Nil(t, err)
 }
 
 func TestTravelSimpleSearch(t *testing.T) {
-	params := &rakuten.TravelHotelSimpleSearchParams{
+	params := &rakuten.TravelSimpleHotelSearchParams{
 		LargeClassCode:  "japan",
 		MiddleClassCode: "akita",
 		SmallClassCode:  "tazawa",
 	}
-	_, _, err := client.Travel.HotelSimpleSearch(ctx, params)
+	_, _, err := client.Travel.SimpleHotelSearch(ctx, params)
 	assert.Nil(t, err)
 }
 

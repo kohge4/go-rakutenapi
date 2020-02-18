@@ -18,7 +18,7 @@ type FavoAddParams struct {
 	ItemCode    string `url:"itemCode,optempty"`
 }
 
-func (s *FavoService) AddFavo(ctx context.Context, opt *FavoAddParams) (*FavoAddResponse, *Response, error) {
+func (s *FavoService) Add(ctx context.Context, opt *FavoAddParams) (*FavoAddResponse, *Response, error) {
 	urlSuffix := fmt.Sprintf("FavoriteBookmark/Add/20120627")
 	param, err := addOptions(urlSuffix, opt)
 	if err != nil {

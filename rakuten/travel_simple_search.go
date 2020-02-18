@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-type TravelHotelSimpleSearchParams struct {
+type TravelSimpleHotelSearchParams struct {
 	LargeClassCode      string  `url:"largeClassCode,omitempty"`
 	MiddleClassCode     string  `url:"middleClassCode,omitempty"`
 	SmallClassCode      string  `url:"smallClassCode,omitempty"`
@@ -25,7 +25,7 @@ type TravelHotelSimpleSearchParams struct {
 }
 
 // どんなrequest を送るかで response の型変わる
-type TravelHotelSimpleSearchResponse struct {
+type TravelSimpleHotelSearchResponse struct {
 	PagingInfo struct {
 		RecordCount int `json:"recordCount"`
 		PageCount   int `json:"pageCount"`
@@ -76,7 +76,7 @@ type TravelHotelSimpleSearchResponse struct {
 	} `json:"hotels"`
 }
 
-func (s *TravelService) HotelSimpleSearch(ctx context.Context, opt *TravelHotelSimpleSearchParams) (*TravelHotelSimpleSearchResponse, *Response, error) {
+func (s *TravelService) SimpleHotelSearch(ctx context.Context, opt *TravelSimpleHotelSearchParams) (*TravelSimpleHotelSearchResponse, *Response, error) {
 	urlSuffix := fmt.Sprintf("Travel/SimpleHotelSearch/20170426?")
 
 	req, err := s.client.NewRequest("GET", urlSuffix, opt, nil)
@@ -84,7 +84,7 @@ func (s *TravelService) HotelSimpleSearch(ctx context.Context, opt *TravelHotelS
 		return nil, nil, err
 	}
 
-	respBody := &TravelHotelSimpleSearchResponse{}
+	respBody := &TravelSimpleHotelSearchResponse{}
 	resp, err := s.client.Do(ctx, req, respBody)
 	if err != nil {
 		return nil, resp, err

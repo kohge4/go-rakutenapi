@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-type TravelHotelKeywordSearchParams struct {
+type TravelKeywordHotelSearchParams struct {
 	Carrier             int    `url:"carrier,omitempty"`
 	Page                int    `url:"page,omitempty"`
 	Hits                int    `url:"hits,omitempty"`
@@ -19,7 +19,7 @@ type TravelHotelKeywordSearchParams struct {
 	Sort                string `url:"sort,omitempty"`
 }
 
-type TravelHotelKeywordSearchResponse struct {
+type TravelKeywordHotelSearchResponse struct {
 	PagingInfo struct {
 		RecordCount int `json:"recordCount"`
 		PageCount   int `json:"pageCount"`
@@ -70,7 +70,7 @@ type TravelHotelKeywordSearchResponse struct {
 	} `json:"hotels"`
 }
 
-func (s *TravelService) HotelKeywordSearch(ctx context.Context, opt *TravelHotelKeywordSearchParams) (*TravelHotelKeywordSearchResponse, *Response, error) {
+func (s *TravelService) KeywordHotelSearch(ctx context.Context, opt *TravelKeywordHotelSearchParams) (*TravelKeywordHotelSearchResponse, *Response, error) {
 	urlSuffix := fmt.Sprintf("Travel/KeywordHotelSearch/20170426?")
 
 	req, err := s.client.NewRequest("GET", urlSuffix, opt, nil)
@@ -78,7 +78,7 @@ func (s *TravelService) HotelKeywordSearch(ctx context.Context, opt *TravelHotel
 		return nil, nil, err
 	}
 
-	respBody := &TravelHotelKeywordSearchResponse{}
+	respBody := &TravelKeywordHotelSearchResponse{}
 	resp, err := s.client.Do(ctx, req, respBody)
 	if err != nil {
 		return nil, resp, err
