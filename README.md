@@ -111,6 +111,3 @@ func QuickStart() {
 |GET /Gora/GoraGolfCourseSearch/20170623 | GolfCourseParams | Gora.GolfCourseSearch| アプリID認可方式 |
 |GET /Gora/GoraGolfCourseDetail/20170623 | GolfCourseDetailParams | Gora.GolfCourseDetailSearch| アプリID認可方式 |
 |GET /Gora/GoraPlanSearch/20170623 | GolfPlanParams | Gora.GolfPlanSearch| アプリID認可方式 |
-
-
-
