@@ -35,13 +35,13 @@ type Client struct {
 
 	common service
 
-	Ichiba *IchibaService
-	Books  *BooksService
-	Travel *TravelService
-	Favo   *FavoService
-	Recipe *RecipeService
-	Kobo   *KoboService
-	Gora   *GoraService
+	Ichiba   *IchibaService
+	Books    *BooksService
+	Travel   *TravelService
+	Favorite *FavoService
+	Recipe   *RecipeService
+	Kobo     *KoboService
+	Gora     *GoraService
 }
 
 type service struct {
@@ -76,7 +76,7 @@ func NewClient(httpClient *http.Client, applicationID string, affiliateID string
 	}
 	c.common.client = c
 	c.Ichiba = (*IchibaService)(&c.common)
-	c.Favo = (*FavoService)(&c.common)
+	c.Favorite = (*FavoService)(&c.common)
 	c.Books = (*BooksService)(&c.common)
 	c.Travel = (*TravelService)(&c.common)
 	c.Recipe = (*RecipeService)(&c.common)

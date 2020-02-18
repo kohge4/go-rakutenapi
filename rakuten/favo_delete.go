@@ -14,7 +14,7 @@ type FavoDeleteParams struct {
 	ItemCode    string `url:"itemCode,optempty"`
 }
 
-func (s *FavoService) DeleteFavo(ctx context.Context, opt *FavoDeleteParams) (*FavoDeleteResponse, *Response, error) {
+func (s *FavoService) Delete(ctx context.Context, opt *FavoDeleteParams) (*FavoDeleteResponse, *Response, error) {
 	urlSuffix := fmt.Sprintf("FavoriteBookmark/Delete/20120627")
 	param, err := addOptions(urlSuffix, opt)
 	if err != nil {

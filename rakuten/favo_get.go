@@ -38,7 +38,7 @@ type FavoGetParams struct {
 	Format      string `url:"format,omitempty"`
 }
 
-func (s *FavoService) GetFavo(ctx context.Context, opt *FavoGetParams) (*FavoGetResponse, *Response, error) {
+func (s *FavoService) Get(ctx context.Context, opt *FavoGetParams) (*FavoGetResponse, *Response, error) {
 	urlSuffix := fmt.Sprintf("FavoriteBookmark/List/20170426")
 	param, err := addOptions(urlSuffix, opt)
 	if err != nil {
