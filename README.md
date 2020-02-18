@@ -4,7 +4,7 @@
 
 - 楽天市場系API
 
-|Endpoint | Parameter Struct | Method | 認可方式, その他 |
+|Endpoint | Parameter Struct | Method | Other |
 |---------|------------------|--------|----------------|
 |GET /IchibaItem/Search/20170706 | IchibaItemSearchParams | Ichiba.Search| アプリID認可方式 |
 |GET /IchibaGenre/Search/20140222 | IchibaGenreSearchParams | Ichiba.GenreSearch| アプリID認可方式 |
@@ -14,7 +14,7 @@
 
 - 楽天ブックス系API 
 
-|Endpoint | Parameter Struct | Method | 認可方式, その他 |
+|Endpoint | Parameter Struct | Method | Other |
 |---------|------------------|--------|----------------|
 |GET /BooksTotal/Search/20170404 | BooksTotalSearchParams | Books.TotalSearch| アプリID認可方式 |
 |GET /BooksBook/Search/20170404 | BooksBookSearchParams | Books.BookSearch| アプリID認可方式 |
@@ -28,8 +28,8 @@
 
 - 楽天トラベル系API 
 
-|Endpoint | Parameter Struct | Method |  認可方式, その他 |
-|---------|------------------|--------| ----------------|
+|Endpoint | Parameter Struct | Method | Other |
+|---------|------------------|--------|----------------|
 |GET /Travel/SimpleHotelSearch/20170426 | TravelSimpleHotelSearchParams | Travel.SimpleHotelSearch| アプリID認可方式 |
 |GET /Travel/HotelDetailSearch/20170426 | TravelHotelDetailSearchParams | Travel.HotelDetailSearch| アプリID認可方式 |
 |GET /Travel/VacantHotelSearch/20170426 | VacantHotelSearchParams | Travel.VacantHotelSearch| アプリID認可方式 |
@@ -40,29 +40,29 @@
 
 - 楽天ブックマーク系API 
 
-|Endpoint | Parameter Struct | Method | 認可方式, その他 |
-|---------|------------------|--------| ----------------|
+|Endpoint | Parameter Struct | Method | Other |
+|---------|------------------|--------|---------------|
 |GET /FavoriteBookmark/List/20170426 | FavoGetParams | Favorite.Get| OAuth2.0 |
 |GET /FavoriteBookmark/Delete/20120627 | FavoAddParams | Favorite.Add| 0Auth2.0 |
 |GET /FavoriteBookmark/List/20170426 | FavoDeleteParams | Favorite.Delete| OAuth2.0 |
 
 - 楽天レシピ系API
 
-|Endpoint | Parameter Struct | Method | 認可方式, その他 |
+|Endpoint | Parameter Struct | Method | Other |
 |---------|------------------|--------|----------------|
 |GET /Recipe/CategoryList/20170426 | RecipeCategoryParams | Recipe.Category| アプリID認可方式 |
 |GET /Recipe/CategoryRanking/20170426 | RecipeRankingParams | Recipe.Ranking| アプリID認可方式 |
 
 - 楽天Kobo系API
 
-|Endpoint | Parameter Struct | Method | 認可方式, その他 |
+|Endpoint | Parameter Struct | Method | Other |
 |---------|------------------|--------|----------------|
 |GET /Kobo/EbookSearch/20170426 | KoboEbooksParams | Kobo.EbooksSearch| アプリID認可方式 |
 |GET /Kobo/GenreSearch/20131010 | KoboGenreSearchParams | Kobo.GenreSearch| アプリID認可方式 |
 
 - 楽天Gora系API
 
-|Endpoint | Parameter Struct | Method | 認可方式, その他 |
+|Endpoint | Parameter Struct | Method | Other |
 |---------|------------------|--------|----------------|
 |GET /Gora/GoraGolfCourseSearch/20170623 | GolfCourseParams | Gora.GolfCourseSearch| アプリID認可方式 |
 |GET /Gora/GoraGolfCourseDetail/20170623 | GolfCourseDetailParams | Gora.GolfCourseDetailSearch| アプリID認可方式 |
