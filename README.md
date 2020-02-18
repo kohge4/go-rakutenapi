@@ -39,8 +39,7 @@
 |GET /Travel/HotelRanking/20170426 | TravelHotelRankingParams | Travel.HotelRanking| アプリID認可方式 |
 
 - 楽天ブックマーク系API 
-
-|Endpoint | Parameter Struct | Method | 認可方式, その他 |
+ Struct | Method | 認可方式, その他 |
 |---------|------------------|--------| ----------------|
 |GET /FavoriteBookmark/List/20170426 | FavoGetParams | Favorite.Get| OAuth2.0 |
 |GET /FavoriteBookmark/Delete/20120627 | FavoAddParams | Favorite.Add| 0Auth2.0 |
@@ -67,3 +66,4 @@
 |GET /Gora/GoraGolfCourseSearch/20170623 | GolfCourseParams | Gora.GolfCourseSearch| アプリID認可方式 |
 |GET /Gora/GoraGolfCourseDetail/20170623 | GolfCourseDetailParams | Gora.GolfCourseDetailSearch| アプリID認可方式 |
 |GET /Gora/GoraPlanSearch/20170623 | GolfPlanParams | Gora.GolfPlanSearch| アプリID認可方式 |
+
